@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faraz Meraj Quazi | AI/ML Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lottie-web@5.7.4/build/player/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f111a;
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #06b6d4, #9333ea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .ring-container {
+      position: relative;
+      width: 90px;
+      height: 90px;
+    }
+    .ring-circle {
+      background: conic-gradient(#06b6d4 calc(var(--percent) * 1%), #2c2c2c 0);
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+    }
+    .ring-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.75rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔵 Scroll Progress -->
+<div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 z-50"></div>
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrolled = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+    document.getElementById('scroll-progress').style.width = scrolled + '%';
+  });
+</script>
+
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full bg-[#0f111a]/80 backdrop-blur-md z-50 shadow-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 text-white">
+    <div class="font-bold text-xl gradient-text">Faraz.AI</div>
+    <nav class="space-x-6 text-sm hidden md:block">
+      <a href="#about" class="hover:text-cyan-400">About</a>
+      <a href="#projects" class="hover:text-cyan-400">Projects</a>
+      <a href="#skills" class="hover:text-cyan-400">Skills</a>
+      <a href="#contact" class="hover:text-cyan-400">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Hero -->
+<section class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 pt-40 relative">
+  <div class="md:w-1/2" data-aos="fade-right">
+    <h1 class="text-5xl font-bold text-white leading-tight">
+      I'm <span class="gradient-text">Faraz Meraj Quazi</span>
+    </h1>
+    <h2 class="text-xl mt-2 text-gray-400"><span id="typed-role"></span></h2>
+    <p class="mt-4 text-gray-400 max-w-md">
+      Designing intelligent software with Python, TensorFlow, OpenCV, and deep learning. I build solutions, not just models.
+    </p>
+    <div class="mt-6 flex gap-4">
+      <a href="#projects" class="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-white hover:to-white hover:text-cyan-500 px-6 py-3 rounded-lg text-white font-semibold transition-all duration-300 shadow-lg">Explore Projects</a>
+      <a href="#contact" class="text-cyan-300 underline hover:text-white">Get in Touch</a>
+    </div>
+  </div>
+  <div class="md:w-1/2" data-aos="fade-left">
+    <div id="lottie-animation" class="w-80 h-80 mx-auto"></div>
+  </div>
+</section>
+
+<!--- py-20 bg-[#11131f] -->
+<!-- About Section -->
+<section class="py-20 bg-gray-900" id="about">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+    
+    <!-- Lottie Animation using iframe -->
+    <div class="md:w-1/2" data-aos="fade-right">
+      <iframe 
+        src="https://lottie.host/embed/6223d8fc-842b-48ba-928a-55256810aca9/C9TPioDsPj.lottie" 
+        style="width: 100%; height: 300px; border: none;" 
+        allowfullscreen
+      ></iframe>
+    </div>
+    
+    <!-- About Text -->
+    <div class="md:w-1/2" data-aos="fade-left">
+      <h2 class="text-3xl font-bold gradient-text mb-4">About Me</h2>
+      <p class="text-gray-400 text-lg leading-relaxed">
+       I'm Faraz Meraj Quazi, a Computer Science and Engineering student at Anjuman College of Engineering and Technology (2022–2026),passionate about building intelligent systems using AI, 
+       machine learning, and computer vision. I develop real-time, data-driven applications with TensorFlow,
+        OpenCV, and NLP tools, and have built award-winning projects.
+         I’m constantly exploring new technologies — including quantum computing — and love turning ideas into
+          impactful solutions.</p>
+    </div>
+  </div>
+</section>
+
+    <!-- Projects Section -->
+  <section class="py-20 bg-[#11131f]" id="projects">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712102.png" alt="AI Avatar"
+    class="w-20 h-20 absolute top-13 right-10 animate-pulse drop-shadow-xl hidden md:block" />
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold gradient-text text-center mb-12">Projects Showcase</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+         
+          <!-- Project Card 2 -->
+          <a href="https://internscout.onrender.com/" target="_blank" rel="noopener noreferrer">
+            <div class="glass p-6 rounded-xl hover:scale-105 transition-transform" data-tilt data-aos="fade-up" data-aos-delay="100">
+              <iframe src="https://lottie.host/embed/b0cbb750-cbf2-427a-8b2a-f9190dc2af89/r3PBGyN11J.lottie"></iframe>
+              <h3 class="text-xl font-bold text-white">🔍 InternScout</h3>
+              <p class="text-gray-400 mt-2 text-sm">InternScout is a Django-based
+                 web application that performs real-time web scraping to fetch the
+                latest internship listings from trusted sources. It features advanced 
+                 filtering by company, role, skills, location, stipend, and duration, and 
+                 allows users to export curated results to CSV for easy tracking and application.</p>
+            </div>
+          </a>
+           <!-- Project Card 1 -->
+          <div class="glass p-6 rounded-xl hover:scale-105 transition-transform" data-tilt data-aos="fade-up">
+            <iframe src="https://lottie.host/embed/68cf404b-bb5a-4b65-9d59-4b09ba77ac30/HnVgkl0gp0.lottie"></iframe>
+            <h3 class="text-xl font-bold text-white">🧩 Emotion Detection</h3>
+            <p class="text-gray-400 mt-2 text-sm">CNN-based facial expression classifier with real-time feedback using OpenCV & TensorFlow Lite.</p>
+          </div>
+
+           <!-- Project Card 3 -->
+          <a href="https://fraudental-account-detect.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            <div class="glass p-6 rounded-xl hover:scale-105 transition-transform" data-tilt data-aos="fade-up" data-aos-delay="100">
+              <iframe src="https://lottie.host/embed/f4315468-980c-43fb-a65d-1b7bd38e33d3/1TRyxoQAeJ.lottie"></iframe>
+              <h3 class="text-xl font-bold text-white">🕵️‍♂️ Fraudulent Account Detection Web App (12-Hour Hackathon Project)</h3>
+              <p class="text-gray-400 mt-2 text-sm">Developed a fully functional fraud detection web app within a 12-hour hackathon using Python, Streamlit, and machine learning. Implemented
+                  Random Forest for fraud classification and integrated Q-learning for adaptive detection. Designed an interactive interface for real-time fraud
+                  analysis, ensuring efficient and continuous learning.
+              </p>
+            </div>
+          </a>
+
+          <!-- Project Card 4 -->
+          <a href="https://symperio.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            <div class="glass p-6 rounded-xl hover:scale-105 transition-transform" data-tilt data-aos="fade-up" data-aos-delay="100">
+              <iframe src="https://lottie.host/embed/aa0717cd-c301-4b7b-b651-e3930ab4c89b/7vlZREeXOD.lottie"></iframe>
+              <h3 class="text-xl font-bold text-white">🧠 Symperio</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                      Developed Symperio, an ML-based app that predicts user actions by 
+                      analyzing mobile behavior app usage, screen time, battery drain . Utilized
+                      supervised learning and data visualization to provide personalized insights,
+                      enhancing expertise in data analysis, feature engineering, and ML
+                      model development.
+              </p>
+            </div>
+          </a>
+
+           <!-- Project Card 5-->
+          <a href="https://faraz-meraj-quazi-app.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            <div class="glass p-6 rounded-xl hover:scale-105 transition-transform" data-tilt data-aos="fade-up" data-aos-delay="100">
+              <iframe src="https://lottie.host/embed/a59cd1f4-c4fb-45ad-a6f7-171881a03f88/kqXO0MPFEy.lottie"></iframe>
+              <h3 class="text-xl font-bold text-white">📊 Data cleaning and visualization app</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                  Developed an interactive app for data preprocessing, cleaning, and visualization using Python Pandas, NumPy and visualization libraries
+                  Matplotlib, Seaborn, Plotly . Enabled dynamic charting, filtering, and data transformation. Deployed via Streamlit, enhancing skills in data
+                  wrangling and user-friendly web app development.
+              </p>
+            </div>
+          </a>
+        
+           <!-- Project Card 6 -->
+          <a href= "https://ner-prototype.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            <div class="glass p-6 rounded-xl hover:scale-105 transition-transform" data-tilt data-aos="fade-up" data-aos-delay="100">
+            <iframe src="https://lottie.host/embed/1651da4a-786c-42b3-aac5-bfd778f4bdcb/OXNZVDxwmf.lottie"></iframe>
+              <h3 class="text-xl font-bold text-white">📄 Named Entity Recognition (NER) App</h3>
+              <p class="text-gray-400 mt-2 text-sm">Developed a Named Entity Recognition 
+                NER app using a custom dataset and advanced NLP techniques, including spaCy, 
+                to automatically identify and classify entities names, organizations, locations,
+                dates, etc. . The app processes raw text or uploaded files, enhancing text analysis efficiency.
+                Strengthened skills in NLP, text mining, and entity extraction.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+  </section>
+
+
+<!-- Skills Section -->
+<section class="py-20 bg-gray-900" id="skills">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center gradient-text mb-12">Skills & Tech</h2>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-10" data-aos="fade-up">
+      <!-- Lottie Animation (Left Side) -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <div id="brain-ai" class="w-64 h-64"></div>
+      </div>
+
+      <!-- Skills Grid (Right Side) -->
+      <div class="w-full md:w-1/2 grid grid-cols-3 sm:grid-cols-4 gap-6 justify-items-center">
+        <!-- Python -->
+        <div class="flex flex-col items-center">
+          <a href="https://www.python.org" target="_blank" rel="noopener noreferrer">
+            <img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="Python" />
+            <span class="text-sm mt-2">Python</span>
+          </a>
+        </div>
+
+        <!-- Pandas -->
+        <div class="flex flex-col items-center">
+          <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="Pandas" />
+            <span class="text-sm mt-2">Pandas</span>
+          </a>
+        </div>
+
+        <!-- NumPy -->
+        <div class="flex flex-col items-center">
+          <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="NumPy" />
+            <span class="text-sm mt-2">NumPy</span>
+          </a>
+        </div>
+
+        <!-- Matplotlib -->
+        <div class="flex flex-col items-center">
+          <a href="https://matplotlib.org/" target="_blank" rel="noopener noreferrer">
+            <img src="https://matplotlib.org/_static/images/documentation.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="Matplotlib" />
+            <span class="text-sm mt-2">Matplotlib</span>
+          </a>
+        </div>
+
+        <!-- Seaborn -->
+        <div class="flex flex-col items-center">
+          <a href="https://seaborn.pydata.org/" target="_blank" rel="noopener noreferrer">
+            <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110 object-contain" alt="Seaborn" />
+            <span class="text-sm mt-2">Seaborn</span>
+          </a>
+        </div>
+
+        <!-- TensorFlow -->
+        <div class="flex flex-col items-center">
+          <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="w-12 h-12 mx-auto transition-transform duration-300 hover:scale-110" alt="TensorFlow" />
+            <span class="text-sm mt-2 ">TensorFlow</span>
+          </a>
+        </div>
+
+        <!-- Django -->
+        <div class="flex flex-col items-center">
+          <a href="https://docs.djangoproject.com/en/5.2/" target="_blank" rel="noopener noreferrer">
+            <img src="https://static.djangoproject.com/img/logos/django-logo-negative.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="Django" />
+            <span class="text-sm mt-2">Django</span>
+          </a>
+        </div>
+        
+
+        <!-- Scikit-learn -->
+        <div class="flex flex-col items-center">
+          <a href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="Scikit-learn" />
+            <span class="text-sm mt-2">Scikit-learn</span>
+          </a>
+        </div>
+
+        <!-- Docker -->
+        <div class="flex flex-col items-center">
+          <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="Docker" />
+            <span class="text-sm mt-2">Docker</span>
+          </a>
+        </div>
+
+        <!-- Keras -->
+        <div class="flex flex-col items-center">
+          <a href="https://keras.io/" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="Keras" />
+            <span class="text-sm mt-2">Keras</span>
+          </a>
+        </div>
+        
+        
+        <!-- OpenCV -->
+        <div class="flex flex-col items-center">
+          <a href="https://opencv.org/" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="OpenCV" />
+            <span class="text-sm mt-2">OpenCV</span>
+          </a>
+        </div>
+
+        <!-- GitHub -->
+        <div class="flex flex-col items-center">
+          <a href="https://github.com/quazifaraz508" target="_blank" rel="noopener noreferrer">
+            <img 
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+                class="w-12 h-12 transition-transform duration-300 hover:scale-110" 
+                alt="GitHub" />
+            <span class="text-sm mt-2 text-white">GitHub</span>
+          </a>
+        </div>
+
+        <!-- HTML -->
+          <div class="flex flex-col items-center">
+          <a href="https://html.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="HTML5" />
+            <span class="text-sm mt-2">HTML</span>
+          </a>  
+          </div>
+      
+          <!-- CSS -->
+          <div class="flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 h-12 transition-transform duration-300 hover:scale-110" alt="CSS3" />
+            <span class="text-sm mt-2">CSS</span>
+          </div>
+
+          <a href="https://qiskit.org" target="_blank" rel="noopener noreferrer">
+            <div class="flex flex-col items-center">
+              <img 
+                src="https://logowik.com/content/uploads/images/qiskit9093.logowik.com.webp" class="w-18 h-12 transition-transform duration-300 hover:scale-110" 
+                alt="Qiskit" />
+                <span class="text-sm mt-2 text-white">Qiskit</span>  
+            </div>
+          </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Lottie Script -->
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('brain-ai'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets4.lottiefiles.com/packages/lf20_jcikwtux.json'
+  });
+</script>
+
+<!-- Contact -->
+<section class="py-20 bg-gray-950 text-center" id="contact">
+  <div class="flex flex-col items-center" data-aos="fade-up">
+    <div id="contact-lottie" class="w-40 h-40 mb-4"></div>
+    <h2 class="text-3xl font-bold gradient-text mb-4">Let’s Connect</h2>
+    <p class="text-gray-400 mb-6">Open for collaborations, research, or freelance ML work.</p>
+
+    <!-- Email button -->
+    <a href="mailto:quazifaraz508@gmail.com"
+       class="bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded text-white mb-6 font-medium shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      Email Me
+    </a>
+
+    <!-- Social icons -->
+    <div class="flex space-x-6">
+      <!-- GitHub -->
+      <div class="bg-white p-2  rounded-lg w-fit hover:scale-110 transition-transform duration-300">
+        <a href="https://github.com/quazifaraz508" target="_blank" rel="noopener noreferrer">
+        <img 
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+          class="w-8 h-8" 
+          alt="GitHub" />
+        </a>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="bg-white p-2  rounded-lg w-fit hover:scale-110 transition-transform duration-300">
+        <a href="https://linkedin.com/in/faraz-meraj-quazi-79943b241" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
+             class="w-8 h-8 hover:scale-110 transition-transform duration-300" 
+             alt="LinkedIn" />
+        </a>
+      </div>
+
+      <!-- Instagram -->
+      <div class="bg-white p-2  rounded-lg w-fit hover:scale-110 transition-transform duration-300">
+        <a href="https://instagram.com/farazquazi2021" target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+               class="w-8 h-8 hover:scale-110 transition-transform duration-300 rounded" 
+               alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-center text-gray-500 text-sm py-8">
+  © 2025 Where machine learning meets meaningful impact — by <a href="#" class="text-purple-400 font-medium hover:text-cyan-600 font-semibold transition-colors">Faraz Meraj Quazi</a>
+</footer>
+
+{% comment %} <!-- Floating Sticky Chat Button -->
+<a href="mailto:you@example.com"
+   class="fixed bottom-6 right-6 bg-gradient-to-br from-purple-600 to-cyan-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition transform z-50">
+   💬
+</a> {% endcomment %}
+
+<script>
+ 
+
+  AOS.init({ duration: 900, once: true });
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets9.lottiefiles.com/packages/lf20_ikvz7qhc.json'
+  });
+  new Typed('#typed-role', {
+    strings: [  "AI & Machine Learning Developer",
+                "Computer Vision & Deep Learning Developer",
+                "Python & TensorFlow Enthusiast",
+                "Builder of Real-Time AI Applications",
+                "Data-Driven Problem Solver",
+                "NLP-Powered Web App Creator",
+                "Future Quantum Computing Explorer"
+              ],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3
+  });
+</script>
+<!-- Additional Lottie Animations -->
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('projects-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets9.lottiefiles.com/packages/lf20_gjmecwii.json' // Project icon
+  });
+
+  lottie.loadAnimation({
+    container: document.getElementById('contact-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets10.lottiefiles.com/packages/lf20_zrqthn6o.json' // Contact mail
+  });
+</script>
+
+</body>
+</html>
